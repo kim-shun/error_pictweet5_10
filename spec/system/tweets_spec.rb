@@ -167,7 +167,7 @@ RSpec.describe 'ツイート詳細', type: :system do
   end
   it 'ログインしたユーザーはツイート詳細ページに遷移してコメント投稿欄が表示される' do
     # ログインする
-    sign_in(@user)
+    sign_in(@tweet.user)
     # ツイートに「詳細」へのリンクがあることを確認する
     expect(
       all('.more')[0].hover
